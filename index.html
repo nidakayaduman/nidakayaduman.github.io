@@ -1,128 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elif Nida Kayaduman - Personal Website</title>
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap">
-    <style>
-        body {
-            font-family: 'Merriweather', serif;
-            margin: 0;
-            padding: 0;
-            background-color: #faf3f5; /* Soft and neutral background */
-            color: #4a4a4a; /* Dark gray text color for better readability */
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elif Nida Kayaduman - Data & AI Consultant</title>
+  <meta
+    name="description"
+    content="Official website of Elif Nida Kayaduman — Data & AI Consultant, Computer Science & Engineering graduate from Sabancı University."
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+  />
+  <style>
+    /* --- MODERN RESET & TEMEL STİLLER --- */
+    :root {
+      --text-color: #1a1a1a;
+      --bg-color: #ffffff;
+      --subtle-gray: #f5f5f5;
+      --border-color: #eaeaea;
+    }
 
-        header {
-            background: #b08ea2; /* Soft mauve header color */
-            color: #ffffff; /* White text for contrast */
-            padding: 40px 0;
-            text-align: center;
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.8em;
-        }
+    /* --- MODERN STICKY HEADER --- */
+    header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 100;
+    }
 
-        header p {
-            font-size: 1.2em;
-        }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 25px;
+    }
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            background-color: #d1b6c8; /* Light mauve for navigation */
-        }
+    header h1 {
+      margin: 0;
+      font-size: 1.5em; /* Header içinde daha kompakt */
+      font-weight: 700;
+    }
 
-        nav ul li {
-            margin: 0 15px;
-        }
+    header nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 30px; /* Modern boşluk ayarı */
+    }
 
-        nav ul li a {
-            color: #4a4a4a; /* Dark gray link color */
-            text-decoration: none;
-            font-size: 1.1em;
-        }
+    header nav ul li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
 
-        nav ul li a:hover {
-            color: #b08ea2; /* Header color on hover */
-        }
+    header nav ul li a:hover {
+      color: #000;
+    }
 
-        main {
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: 40px auto;
-            background: #ffffff; /* White background for content */
-            border-radius: 8px;
-            color: #4a4a4a; /* Text color */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
+    /* --- ANA İÇERİK ALANI (KUTU YOK) --- */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 25px;
+    }
 
-        section {
-            margin-bottom: 40px;
-        }
+    section {
+      padding-top: 80px; /* İlk bölüme sticky header için boşluk */
+      margin-bottom: 60px;
+      /* scroll-margin-top, #link'e tıklandığında header'ın üstte kalmamasını sağlar */
+      scroll-margin-top: 100px; 
+    }
 
-        h2 {
-            color: #4a4a4a; /* Section title color */
-            font-size: 1.8em;
-            border-bottom: 2px solid #d1b6c8; /* Divider color */
-            padding-bottom: 10px;
-        }
+    h2 {
+      font-size: 2.2em;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 25px;
+      border: none; /* Eski stili kaldır */
+      padding: 0;
+    }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #4a4a4a; /* Dark gray footer background */
-            color: #ffffff; /* White footer text */
-        }
+    p {
+      font-size: 1.1em; /* Okunabilirlik için biraz daha büyük */
+      color: #333;
+      margin-bottom: 20px;
+    }
 
-        a {
-            color: #b08ea2; /* Accent color for links */
-            text-decoration: none;
-        }
+    strong {
+      font-weight: 600;
+      color: #000;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    a {
+      color: #000;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    /* --- YENİ & MODERN İLETİŞİM BUTONLARI --- */
+    .contact-links {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap; /* Küçük ekranlarda alt satıra geç */
+      gap: 15px; /* Butonlar arası boşluk */
+    }
+
+    .contact-links li a {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 1.1em;
+      font-weight: 500;
+      color: var(--text-color);
+      background-color: var(--subtle-gray);
+      padding: 12px 20px;
+      border-radius: 8px; /* Yuvarlatılmış köşeler */
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .contact-links li a:hover {
+      background-color: #e0e0e0;
+      transform: translateY(-2px); /* Hafif yükselme efekti */
+    }
+
+    /* --- TEMİZ FOOTER --- */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+      color: #777;
+      font-size: 0.9em;
+      border-top: 1px solid var(--border-color);
+    }
+
+    /* --- RESPONSIVE AYARLAR --- */
+    @media (max-width: 700px) {
+      .header-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      header h1 {
+        font-size: 1.3em;
+      }
+      
+      header nav ul {
+        gap: 20px;
+      }
+
+      h2 {
+        font-size: 1.8em;
+      }
+
+      p {
+        font-size: 1.05em;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Elif Nida Kayaduman</h1>
-        <p>Computer Science and Engineering Student</p>
-    </header>
-    <nav>
+  <header>
+    <div class="header-container">
+      <h1>Elif Nida Kayaduman</h1>
+      <nav>
         <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-    </nav>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                Hello, I'm Elif Nida Kayaduman, a Computer Science and Engineering student at Sabanci University, with a minor in Business Analytics. If you have any questions or simply wish to connect, do not hesitate to reach out; I'm always open to new opportunities and conversations.
-            </p>
-        </section>
+      </nav>
+    </div>
+  </header>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>
-                My email address: <a href="mailto:kayaduman@sabanciuniv.edu">kayaduman@sabanciuniv.edu</a><br>
-                You can find my LinkedIn profile at: <a href="https://www.linkedin.com/in/elif-nida-kayaduman-3b1128234/">linkedin.com/in/elif-nida-kayaduman</a><br>
-                You can also find my GitHub profile at: <a href="https://github.com/nidakayaduman">github.com/nidakayaduman</a>
-            </p>
-        </section>
-    </main>
-    <footer>
-        &copy; 2024 Elif Nida Kayaduman
-    </footer>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hello, I’m <strong>Elif Nida Kayaduman</strong> — a
+        <strong>Data & AI Consultant</strong> passionate about building
+        intelligent, data-driven solutions that bridge business strategy and
+        technology.
+      </p>
+      <p>
+        I hold a BSc in <strong>Computer Science and Engineering</strong> with a
+        minor in <strong>Business Analytics</strong> from Sabancı University.
+      </p>
+    </section>
+
+    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 60px 0;">
+
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <p>
+        <strong>Data & AI Consultant (Current)</strong><br />
+        Supporting digital transformation projects, AI readiness assessments,
+        and enterprise data strategy implementations.
+      </p>
+      <p>
+        <strong>Akbank Technology — Data Architect (Part-Time)</strong><br />
+        Worked on data governance, PowerDesigner data modeling, and SQL-based
+        KPI validation and quality checks.
+      </p>
+      <p>
+        <strong>Aalto University (Finland) — Research Assistant</strong><br />
+        Conducted research on <em>Federated Learning</em> and data privacy
+        within distributed AI systems.
+      </p>
+    </section>
+
+    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 60px 0;">
+
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <ul class="contact-links">
+        <li>
+          <a href="mailto:elifnida@gmail.com">Email</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/nidakayaduman/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </li>
+        <li>
+          <a href="https://github.com/nidakayaduman" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Elif Nida Kayaduman — All rights reserved.
+  </footer>
 </body>
 </html>
