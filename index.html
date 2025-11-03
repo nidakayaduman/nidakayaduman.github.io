@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,247 +8,358 @@
     name="description"
     content="Official website of Elif Nida Kayaduman — Data & AI Consultant, Computer Science & Engineering graduate from Sabancı University."
   />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-  />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
-    /* --- MODERN RESET & TEMEL STİLLER --- */
     :root {
-      --text-color: #1a1a1a;
-      --bg-color: #ffffff;
-      --subtle-gray: #f5f5f5;
-      --border-color: #eaeaea;
+      --bg-dark: #0a0a0a;
+      --bg-gradient: radial-gradient(circle at top right, #1a1a1a 0%, #000 100%);
+      --accent: #a855f7;
+      --accent-light: #c084fc;
+      --text-light: #f5f5f5;
+      --text-dim: #b3b3b3;
+      --glass: rgba(255, 255, 255, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
+      background: var(--bg-gradient);
       font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* --- MODERN STICKY HEADER --- */
-    header {
-      position: sticky;
-      top: 0;
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border-color);
-      z-index: 100;
-    }
-
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px 25px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.5em; /* Header içinde daha kompakt */
-      font-weight: 700;
-    }
-
-    header nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 30px; /* Modern boşluk ayarı */
-    }
-
-    header nav ul li a {
-      color: #333;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    header nav ul li a:hover {
-      color: #000;
-    }
-
-    /* --- ANA İÇERİK ALANI (KUTU YOK) --- */
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 25px;
-    }
-
-    section {
-      padding-top: 80px; /* İlk bölüme sticky header için boşluk */
-      margin-bottom: 60px;
-      /* scroll-margin-top, #link'e tıklandığında header'ın üstte kalmamasını sağlar */
-      scroll-margin-top: 100px; 
-    }
-
-    h2 {
-      font-size: 2.2em;
-      font-weight: 700;
-      color: #000;
-      margin-bottom: 25px;
-      border: none; /* Eski stili kaldır */
-      padding: 0;
-    }
-
-    p {
-      font-size: 1.1em; /* Okunabilirlik için biraz daha büyük */
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    strong {
-      font-weight: 600;
-      color: #000;
+      color: var(--text-light);
+      overflow-x: hidden;
     }
 
     a {
-      color: #000;
-      font-weight: 500;
+      color: var(--accent);
       text-decoration: none;
+      transition: color 0.3s ease;
     }
 
-    /* --- YENİ & MODERN İLETİŞİM BUTONLARI --- */
-    .contact-links {
+    a:hover {
+      color: var(--accent-light);
+    }
+
+    /* --- Navbar --- */
+    .main-nav {
+      position: fixed;
+      top: 30px;
+      right: 50px;
+      z-index: 10;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(20px);
+      border-radius: 50px;
+      padding: 10px 30px;
+    }
+
+    .main-nav ul {
       list-style: none;
-      padding-left: 0;
-      margin-top: 20px;
       display: flex;
-      flex-wrap: wrap; /* Küçük ekranlarda alt satıra geç */
-      gap: 15px; /* Butonlar arası boşluk */
+      gap: 30px;
+      font-weight: 600;
     }
 
-    .contact-links li a {
-      display: inline-block;
-      text-decoration: none;
-      font-size: 1.1em;
-      font-weight: 500;
-      color: var(--text-color);
-      background-color: var(--subtle-gray);
-      padding: 12px 20px;
-      border-radius: 8px; /* Yuvarlatılmış köşeler */
-      transition: background-color 0.2s ease, transform 0.2s ease;
+    .main-nav a {
+      color: var(--text-light);
+      position: relative;
     }
 
-    .contact-links li a:hover {
-      background-color: #e0e0e0;
-      transform: translateY(-2px); /* Hafif yükselme efekti */
+    .main-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s ease;
     }
 
-    /* --- TEMİZ FOOTER --- */
+    .main-nav a:hover::after {
+      width: 100%;
+    }
+
+    /* --- Hero --- */
+    .hero-section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero-section::before {
+      content: "KAYADUMAN";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 15rem;
+      color: rgba(255,255,255,0.02);
+      letter-spacing: 10px;
+      user-select: none;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content h1 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 6rem;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #fff, var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 15px;
+    }
+
+    .hero-content .tagline {
+      font-size: 1.5em;
+      color: var(--text-dim);
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+
+    /* --- Sections --- */
+    section {
+      padding: 100px 20px;
+      max-width: 1100px;
+      margin: auto;
+      position: relative;
+    }
+
+    h2 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 60px;
+      color: var(--text-light);
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: var(--accent);
+      margin: 20px auto 0;
+      border-radius: 2px;
+    }
+
+    /* --- Card Sections --- */
+    .experience-item, .education-item {
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 20px rgba(168,85,247,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .experience-item:hover, .education-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(168,85,247,0.3);
+    }
+
+    .experience-item h3, .education-item h3 {
+      font-size: 1.6em;
+      color: var(--accent-light);
+      margin-bottom: 10px;
+    }
+
+    .company, .institution {
+      font-style: italic;
+      color: var(--text-dim);
+    }
+
+    .dates {
+      font-size: 0.9em;
+      color: #aaa;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-left: 20px;
+      color: #ccc;
+    }
+
+    /* --- Contact --- */
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .contact-button {
+      background: transparent;
+      border: 1px solid var(--accent);
+      border-radius: 40px;
+      padding: 14px 35px;
+      color: var(--text-light);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-button:hover {
+      background: var(--accent);
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px rgba(168,85,247,0.6);
+    }
+
     footer {
       text-align: center;
-      padding: 40px 20px;
-      margin-top: 60px;
+      padding: 50px 20px;
       color: #777;
-      font-size: 0.9em;
-      border-top: 1px solid var(--border-color);
+      background: #050505;
+      border-top: 1px solid rgba(255,255,255,0.05);
     }
 
-    /* --- RESPONSIVE AYARLAR --- */
-    @media (max-width: 700px) {
-      .header-container {
-        flex-direction: column;
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 4rem;
+      }
+      .main-nav {
+        right: 10px;
+        left: 10px;
+      }
+      .main-nav ul {
         gap: 15px;
-      }
-      
-      header h1 {
-        font-size: 1.3em;
-      }
-      
-      header nav ul {
-        gap: 20px;
-      }
-
-      h2 {
-        font-size: 1.8em;
-      }
-
-      p {
-        font-size: 1.05em;
+        justify-content: center;
       }
     }
+
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <h1>Elif Nida Kayaduman</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>Elıf Nıda Kayaduman</h1>
+      <p class="tagline">Data & AI Consultant | Sabancı University Alumni</p>
     </div>
   </header>
 
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <p>
-        Hello, I’m <strong>Elif Nida Kayaduman</strong> — a
-        <strong>Data & AI Consultant</strong> passionate about building
-        intelligent, data-driven solutions that bridge business strategy and
-        technology.
-      </p>
-      <p>
-        I hold a BSc in <strong>Computer Science and Engineering</strong> with a
-        minor in <strong>Business Analytics</strong> from Sabancı University.
+      <p style="text-align:center;max-width:800px;margin:auto;color:#ccc;font-size:1.1em;">
+        Hello, I’m <strong>Elif Nida Kayaduman</strong> — an
+        <strong>AI & Data Consultant</strong>. I specialize in applying data-driven
+        approaches to solve business challenges and develop practical,
+        technology-based solutions.
       </p>
     </section>
-
-    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 60px 0;">
 
     <section id="experience">
-      <h2>Professional Experience</h2>
-      <p>
-        <strong>Data & AI Consultant (Current)</strong><br />
-        Supporting digital transformation projects, AI readiness assessments,
-        and enterprise data strategy implementations.
-      </p>
-      <p>
-        <strong>Akbank Technology — Data Architect (Part-Time)</strong><br />
-        Worked on data governance, PowerDesigner data modeling, and SQL-based
-        KPI validation and quality checks.
-      </p>
-      <p>
-        <strong>Aalto University (Finland) — Research Assistant</strong><br />
-        Conducted research on <em>Federated Learning</em> and data privacy
-        within distributed AI systems.
-      </p>
+      <h2>Professıonal Experıence</h2>
+
+      <div class="experience-item">
+        <h3>AI & Data Consultant</h3>
+        <p class="company">Ernst & Young (EY) · Full-time</p>
+        <p class="dates">Aug 2025 - Present · 4 mos | Istanbul, Türkiye · On-site</p>
+        <ul>
+          <li>Helping organizations accelerate their digital transformation through data and AI-driven solutions.
+Focused on turning complex business challenges into innovative, technology-powered opportunities.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <h3>Data Architect</h3>
+        <p class="company">Akbank Teknoloji · Part-time</p>
+        <p class="dates">Mar 2025 - Aug 2025 · 6 mos | Remote</p>
+        <ul>
+          <li>Designed and maintained data models using PowerDesigner, ensuring alignment with evolving business requirements.</li>
+          <li>Performed SQL-based checks to validate schema integrity and support database consistency.</li>
+          <li>Collaborated with internal teams on data modeling requests and contributed to resolving issues related to model structure and data standards.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <h3>Research Assistant</h3>
+        <p class="company">Aalto University · Internship</p>
+        <p class="dates">Jul 2024 - Aug 2024 · 2 mos | Espoo, Uusimaa, Finland · On-site</p>
+        <ul>
+          <li>Worked on Federated Learning with a focus on its decentralized training architecture and privacy-preserving mechanisms.</li>
+          <li>Applied foundational models to explore key concepts and gain practical insight into real-world FL implementations.</li>
+        </ul>
+      </div>
     </section>
 
-    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 60px 0;">
+    <section id="education">
+      <h2>Educatıon</h2>
+
+      <div class="education-item">
+        <h3>Bachelor's degree, Computer Science & Engineering</h3>
+        <p class="institution">Sabanci University</p>
+        <p class="dates">Oct 2020 - Jun 2025</p>
+        <p class="details">Grade: cGPA: 3.15 / 4.00 | %50 Scholarship</p>
+      </div>
+
+      <div class="education-item">
+        <h3>Minor Degree, Business Analytics</h3>
+        <p class="institution">Sabanci University</p>
+        <p class="dates">2022 - Jan 2025</p>
+        <p class="details">Grade: 3.61 / 4.00</p>
+      </div>
+    </section>
 
     <section id="contact">
-      <h2>Get in Touch</h2>
-      <ul class="contact-links">
-        <li>
-          <a href="mailto:elifnida@gmail.com">Email</a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/nidakayaduman/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </li>
-        <li>
-          <a href="https://github.com/nidakayaduman" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </li>
-      </ul>
+      <h2>Get In Touch</h2>
+      <p style="text-align:center;max-width:700px;margin:auto;color:#ccc;font-size:1.1em;">
+        I'm always open to discussing new projects, creative ideas, or opportunities. Feel free to reach out.
+      </p>
+      <div class="contact-links" style="margin-top:40px;">
+        <a href="mailto:elifnida@gmail.com" class="contact-button"><i class="fas fa-envelope"></i> Email Me</a>
+        <a href="https://www.linkedin.com/in/nidakayaduman/" target="_blank" rel="noopener noreferrer" class="contact-button"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/nidakayaduman" target="_blank" rel="noopener noreferrer" class="contact-button"><i class="fab fa-github"></i> GitHub</a>
+      </div>
     </section>
   </main>
 
   <footer>
-    &copy; 2025 Elif Nida Kayaduman — All rights reserved.
+    <p>&copy; 2026 Elif Nida Kayaduman. All rights reserved.</p>
   </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
