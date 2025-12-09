@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy – RetroN VintageCam</title>
+
+<style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+                     "Helvetica Neue", Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f6f6f7;
+        color: #1b1b1d;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 32px 20px 60px 20px;
+    }
+
+    h1, h2 {
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: #111;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-top: 0;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-top: 32px;
+    }
+
+    p {
+        margin-bottom: 16px;
+    }
+
+    .section {
+        background: #ffffff;
+        border-radius: 14px;
+        padding: 24px 28px;
+        margin-top: 24px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .last-updated {
+        color: #555;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    a {
+        color: #007aff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Dark Mode */
+    @media (prefers-color-scheme: dark) {
+        body {
+            background: #0d0d0d;
+            color: #e8e8e8;
+        }
+        .section {
+            background: #1a1a1c;
+            box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
+        }
+        h1, h2 {
+            color: #fff;
+        }
+        a { color: #0a84ff; }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Privacy Policy for RetroN VintageCam</h1>
+    <p class="last-updated">Last Updated: December 2025</p>
+
+    <div class="section">
+        <h2>1. Developer Information</h2>
+        <p>Developer: <strong>Elif Nida Kayaduman</strong><br />
+        Contact Email: <a href="mailto:elifnida@gmail.com">elifnida@gmail.com</a></p>
+    </div>
+
+    <div class="section">
+        <h2>2. Overview</h2>
+        <p>RetroN VintageCam is a retro-style camera and photo editing app. All image processing happens locally on your device. We do not operate servers and we do not collect, store, or transmit personal data.</p>
+    </div>
+
+    <div class="section">
+        <h2>3. Information Processed Locally</h2>
+        <p>The app processes only the following information, and only on your device:</p>
+        <ul>
+            <li>Photos you select or capture</li>
+            <li>Filters, frames, and effects you apply</li>
+            <li>Optional custom date stamps</li>
+            <li>Optional city/area label (if location permission is granted)</li>
+            <li>Locally saved Memories metadata</li>
+        </ul>
+        <p>No information is transmitted to external servers.</p>
+    </div>
+
+    <div class="section">
+        <h2>4. Permissions</h2>
+        <p>The app may request access to:</p>
+        <ul>
+            <li><strong>Photos:</strong> To select and save edited images.</li>
+            <li><strong>Camera:</strong> To capture photos inside the app.</li>
+            <li><strong>Location (Optional):</strong> To display a city or place name on your photo.</li>
+            <li><strong>ATT (Tracking):</strong> For ad personalization consent.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>5. Third-Party Services</h2>
+        <p>We use <strong>Google AdMob</strong> to display ads. AdMob may collect:</p>
+        <ul>
+            <li>Advertising Identifier (IDFA), if you consent</li>
+            <li>Approximate location from IP address</li>
+            <li>Device and OS information</li>
+            <li>IP address for fraud prevention</li>
+        </ul>
+        <p>This information is processed by Google, not by us.</p>
+    </div>
+
+    <div class="section">
+        <h2>6. What the App Does NOT Do</h2>
+        <p>The app does not:</p>
+        <ul>
+            <li>Upload your photos</li>
+            <li>Sell or share data</li>
+            <li>Track precise location</li>
+            <li>Collect personally identifiable information</li>
+            <li>Use analytics SDKs</li>
+            <li>Access your social accounts</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>7. GDPR (EU Users)</h2>
+        <p>Consent for ads is managed using Apple's ATT framework and Google's UMP system. EU users may manage preferences at any time.</p>
+    </div>
+
+    <div class="section">
+        <h2>8. CCPA / CPRA</h2>
+        <p>RetroN VintageCam does not sell or share personal information. California users may manage advertising data via Google’s privacy dashboard.</p>
+    </div>
+
+    <div class="section">
+        <h2>9. CalOPPA</h2>
+        <p>This policy is publicly available and will be updated with a new date if changes occur.</p>
+    </div>
+
+    <div class="section">
+        <h2>10. Data Retention</h2>
+        <p>All data stays on your device. Deleting the app removes all stored data.</p>
+    </div>
+
+    <div class="section">
+        <h2>11. Children’s Privacy</h2>
+        <p>The app is not intended for children under 13 and does not knowingly collect data from them.</p>
+    </div>
+
+    <div class="section">
+        <h2>12. Security</h2>
+        <p>Data is protected by your device’s built-in security such as Face ID, passcode, and sandboxing.</p>
+    </div>
+
+    <div class="section">
+        <h2>13. Policy Changes</h2>
+        <p>If we update this Privacy Policy, we will revise the “Last Updated” date accordingly.</p>
+    </div>
+
+    <div class="section">
+        <h2>14. Contact</h2>
+        <p>If you have questions, contact us at:<br />
+        <a href="mailto:elifnida@gmail.com">elifnida@gmail.com</a></p>
+    </div>
+
+</div>
+
+</body>
+</html>
