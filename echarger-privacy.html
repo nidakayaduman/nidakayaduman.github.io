@@ -517,7 +517,7 @@
     <div class="highlight">
       ChargePath is a route planning and EV charging decision support app. We prioritize user privacy and <strong>minimize data collection</strong> wherever possible. Most core calculations run locally on your device.
     </div>
-    <p>Network requests occur for routing, place search, weather data, and advertising as described in the sections below. The developer does not operate independent servers and does not store personal data.</p>
+    <p>Network requests occur for routing, place search, weather data, EV charging station data retrieval, and advertising as described in the sections below. Charging station information shown in the app may come from third-party data sources, including Open Charge Map and other region-specific providers. The developer does not operate independent servers and does not store personal data.</p>
   </section>
 
   <!-- S3 -->
@@ -534,6 +534,8 @@
       <div class="card-row"><span class="dot"></span>App usage events (e.g. route planning actions)</div>
       <div class="card-row"><span class="dot"></span>Device information (OS version, device type)</div>
       <div class="card-row"><span class="dot"></span>Locally stored preferences and vehicle profile</div>
+      <div class="card-row"><span class="dot"></span>Charging station information provided by third-party station data sources; this station data does not include personal information about the user</div>
+      <div class="card-row"><span class="dot"></span>When widget features are enabled, limited nearby station summaries and local app snapshots shared on-device between the app and widget</div>
     </div>
   </section>
 
@@ -547,6 +549,7 @@
     <div class="card">
       <div class="card-row"><span class="dot"></span>Used for route planning and nearby station discovery via Apple MapKit</div>
       <div class="card-row"><span class="dot"></span>Used to fetch weather conditions along your route via Apple WeatherKit and Open-Meteo</div>
+      <div class="card-row"><span class="dot"></span>If widget-related nearby station features are used, location-derived nearby station summaries may be stored locally on-device and shared with the widget through Apple-provided local storage</div>
       <div class="card-row"><span class="dot"></span>Location access is optional and fully user-controlled</div>
       <div class="card-row"><span class="dot"></span>Not stored on developer servers</div>
       <div class="card-row"><span class="dot"></span>May be transmitted to Apple (MapKit, WeatherKit) and Open-Meteo for service delivery</div>
@@ -577,6 +580,7 @@
       <div class="card-row"><span class="dot"></span><div><strong>Apple MapKit</strong> — Routing, directions, and place search. Subject to Apple's privacy policy.</div></div>
       <div class="card-row"><span class="dot"></span><div><strong>Apple WeatherKit</strong> — Weather conditions along your route. Subject to Apple's privacy policy.</div></div>
       <div class="card-row"><span class="dot"></span><div><strong>Open-Meteo</strong> — Fallback weather data provider when WeatherKit is unavailable. Open-Meteo is GDPR-compliant and does not require user identification.</div></div>
+      <div class="card-row"><span class="dot"></span><div><strong>Open Charge Map and other region-specific station data providers</strong> — Used to display EV charging station information in supported countries or regions. This station data does not include personal information about the user.</div></div>
       <div class="card-row"><span class="dot"></span><div><strong>Apple Remote Time Service</strong> — Used to verify the current time for subscription validation purposes.</div></div>
       <div class="card-row"><span class="dot"></span><div><strong>Google AdMob</strong> — Advertising for free users. Subject to Google's privacy policy.</div></div>
     </div>
@@ -636,6 +640,8 @@
     <div class="card">
       <div class="card-row"><span class="dot"></span>Usage limits and premium status stored securely via iOS Keychain</div>
       <div class="card-row"><span class="dot"></span>Vehicle profile and preferences stored locally on your device</div>
+      <div class="card-row"><span class="dot"></span>When the widget is enabled, limited app data may be stored locally in an App Group container shared between the app and the widget so the widget can display nearby charging station information</div>
+      <div class="card-row"><span class="dot"></span>Shared on-device data may include local app snapshots and nearby station summaries needed for widget presentation</div>
       <div class="card-row"><span class="dot"></span>No personal accounts or sign-in required</div>
       <div class="card-row"><span class="dot"></span>No central user database maintained by the developer</div>
     </div>
@@ -649,7 +655,7 @@
     </div>
     <div class="divider"></div>
     <div class="highlight">
-      Most data is stored locally on your device and is removed when you delete the app. However, <strong>some data stored in iOS Keychain</strong> (such as premium status and usage limits) may persist after deletion depending on iOS version and device settings. You can clear this by resetting all settings on your device. The developer does not retain any copies of your data on external servers.
+      Most data is stored locally on your device and is removed when you delete the app. This includes locally stored preferences, vehicle profile data, and widget-related shared local snapshots or nearby station summaries stored in the app's App Group container. However, <strong>some data stored in iOS Keychain</strong> (such as premium status and usage limits) may persist after deletion depending on iOS version and device settings. You can clear this by resetting all settings on your device. The developer does not retain any copies of your data on external servers.
     </div>
   </section>
 
