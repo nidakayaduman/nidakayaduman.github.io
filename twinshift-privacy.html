@@ -1,410 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy - Twin Shift: Mirror Puzzle</title>
-  <meta
-    name="description"
-    content="Privacy Policy for Twin Shift: Mirror Puzzle, an iOS puzzle game by Elif Nida Kayaduman."
-  />
-  <style>
-    :root {
-      --bg-start: #f8f6ff;
-      --bg-mid: #eef6ff;
-      --bg-end: #fff3fa;
-      --card: rgba(255, 255, 255, 0.92);
-      --ink: #1e2433;
-      --muted: #5d6476;
-      --soft: #f3efff;
-      --soft-blue: #eaf5ff;
-      --accent: #7b65d9;
-      --accent-blue: #3c83c9;
-      --accent-pink: #d45f99;
-      --border: rgba(123, 101, 217, 0.18);
-      --shadow: 0 24px 70px rgba(61, 75, 130, 0.16);
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — Twin Shift: Mirror Puzzle</title>
+<meta name="description" content="Privacy Policy for Twin Shift: Mirror Puzzle, an iOS puzzle game by Elif Nida Kayaduman." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f6f7f9;
+    --panel:#ffffff;
+    --ink:#171a2b;
+    --muted:#5b5f74;
+    --line:#e4e5ec;
+    --pink:#c9487a;
+    --blue:#2f6fa8;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+    --display: 'Space Grotesk', ui-sans-serif, sans-serif;
+    --body: 'Inter', ui-sans-serif, sans-serif;
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:16px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:var(--blue); text-decoration:none; border-bottom:1px solid rgba(47,111,168,0.35); }
+  a:hover{ border-bottom-color:currentColor; }
+
+  /* ---------- header ---------- */
+  header{
+    padding:64px 40px 40px;
+    max-width:1180px;
+    margin:0 auto;
+    border-bottom:1px solid var(--line);
+  }
+  .mark{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:28px;
+  }
+  .mark-glyph{
+    width:22px; height:22px;
+    border-radius:6px;
+    background:linear-gradient(135deg, var(--pink) 50%, var(--blue) 50%);
+    flex:none;
+  }
+  .mark-text{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:0.95rem;
+    letter-spacing:0.01em;
+  }
+  h1{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:clamp(2rem, 4.4vw, 3.1rem);
+    line-height:1.08;
+    letter-spacing:-0.02em;
+    margin:0 0 16px;
+    max-width:20ch;
+  }
+  .dek{
+    max-width:56ch;
+    color:var(--muted);
+    font-size:1.05rem;
+    margin:0 0 28px;
+  }
+  .meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 28px;
+    font-family:var(--mono);
+    font-size:0.78rem;
+    color:var(--muted);
+    letter-spacing:0.02em;
+  }
+  .meta strong{ color:var(--ink); font-weight:600; }
+
+  /* ---------- layout ---------- */
+  .layout{
+    max-width:1180px;
+    margin:0 auto;
+    padding:48px 40px 96px;
+    display:grid;
+    grid-template-columns:240px minmax(0,1fr);
+    gap:64px;
+    align-items:start;
+  }
+  nav{
+    position:sticky;
+    top:40px;
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+  }
+  nav a{
+    border:0;
+    padding:7px 0;
+    font-size:0.86rem;
+    color:var(--muted);
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+  }
+  nav a span.n{
+    font-family:var(--mono);
+    font-size:0.72rem;
+    color:#a9acbc;
+    flex:none;
+    width:1.4em;
+  }
+  nav a.active,
+  nav a:hover{ color:var(--ink); }
+  nav a.active span.n{ color:var(--pink); }
+
+  main{ min-width:0; }
+
+  .callout{
+    display:flex;
+    gap:14px;
+    padding:18px 20px;
+    border:1px solid var(--line);
+    border-left:3px solid var(--blue);
+    border-radius:4px;
+    background:var(--panel);
+    margin:0 0 48px;
+    font-size:0.94rem;
+    color:var(--muted);
+  }
+  .callout strong{ color:var(--ink); }
+
+  section{
+    padding:36px 0;
+    border-top:1px solid var(--line);
+    scroll-margin-top:32px;
+  }
+  section:first-of-type{ border-top:0; padding-top:0; }
+
+  .sec-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin:0 0 14px;
+  }
+  .sec-num{
+    font-family:var(--mono);
+    font-size:0.78rem;
+    color:#fff;
+    background:var(--ink);
+    border-radius:50%;
+    width:26px; height:26px;
+    display:flex; align-items:center; justify-content:center;
+    flex:none;
+  }
+  h2{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.28rem;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+  p{ margin:0 0 14px; color:var(--muted); }
+  p:last-child{ margin-bottom:0; }
+  section > p:first-of-type{ margin-top:0; }
+
+  strong{ color:var(--ink); font-weight:600; }
+
+  ul{ margin:14px 0 0; padding-left:0; list-style:none; }
+  li{
+    margin:0 0 9px;
+    padding-left:20px;
+    position:relative;
+    color:var(--muted);
+  }
+  li::before{
+    content:"";
+    position:absolute;
+    left:0; top:0.62em;
+    width:6px; height:1.5px;
+    background:var(--muted);
+  }
+
+  .link-grid{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0,1fr));
+    gap:10px;
+    margin-top:16px;
+  }
+  .link-grid a{
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:13px 15px;
+    display:block;
+    font-size:0.9rem;
+    color:var(--ink);
+    font-weight:500;
+  }
+  .link-grid a:hover{ border-color:var(--blue); }
+
+  footer{
+    max-width:1180px;
+    margin:0 auto;
+    padding:28px 40px 56px;
+    border-top:1px solid var(--line);
+    color:#9497a8;
+    font-size:0.82rem;
+  }
+
+  @media (max-width: 880px){
+    header{ padding:44px 22px 32px; }
+    .layout{
+      grid-template-columns:1fr;
+      padding:36px 22px 72px;
+      gap:8px;
     }
-
-    * {
-      box-sizing: border-box;
+    nav{
+      position:static;
+      flex-direction:row;
+      flex-wrap:wrap;
+      gap:8px 16px;
+      padding-bottom:28px;
+      margin-bottom:28px;
+      border-bottom:1px solid var(--line);
     }
+    nav a{ padding:0; }
+    .link-grid{ grid-template-columns:1fr; }
+    footer{ padding:24px 22px 44px; }
+  }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      color: var(--ink);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      background:
-        radial-gradient(circle at 16% 8%, rgba(212, 95, 153, 0.18), transparent 28%),
-        radial-gradient(circle at 85% 12%, rgba(60, 131, 201, 0.18), transparent 30%),
-        linear-gradient(135deg, var(--bg-start) 0%, var(--bg-mid) 48%, var(--bg-end) 100%);
-    }
-
-    a {
-      color: var(--accent-blue);
-      font-weight: 650;
-      text-decoration-color: rgba(60, 131, 201, 0.35);
-      text-underline-offset: 3px;
-    }
-
-    a:hover {
-      color: var(--accent);
-      text-decoration-color: currentColor;
-    }
-
-    .page {
-      width: min(100%, 980px);
-      margin: 0 auto;
-      padding: 32px 20px 44px;
-    }
-
-    .policy-card {
-      overflow: hidden;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(14px);
-    }
-
-    header {
-      padding: 46px 48px 38px;
-      color: #fff;
-      background:
-        linear-gradient(135deg, rgba(70, 91, 196, 0.92), rgba(139, 105, 219, 0.9) 52%, rgba(214, 101, 162, 0.88)),
-        radial-gradient(circle at 90% 15%, rgba(255, 255, 255, 0.24), transparent 32%);
-    }
-
-    .brand-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 34px;
-    }
-
-    .app-name {
-      margin: 0;
-      font-size: clamp(1.05rem, 2vw, 1.25rem);
-      font-weight: 750;
-      letter-spacing: 0.01em;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      min-height: 34px;
-      padding: 7px 13px;
-      border: 1px solid rgba(255, 255, 255, 0.45);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.18);
-      color: #fff;
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-    }
-
-    h1 {
-      max-width: 760px;
-      margin: 0;
-      font-size: clamp(2.2rem, 8vw, 4.5rem);
-      line-height: 1.04;
-      letter-spacing: -0.035em;
-    }
-
-    .subtitle {
-      max-width: 760px;
-      margin: 18px 0 0;
-      color: rgba(255, 255, 255, 0.9);
-      font-size: clamp(1rem, 2vw, 1.15rem);
-    }
-
-    main {
-      padding: 36px 48px 16px;
-    }
-
-    .notice {
-      margin: 0 0 28px;
-      padding: 18px 20px;
-      border: 1px solid rgba(123, 101, 217, 0.22);
-      border-radius: 18px;
-      background: linear-gradient(135deg, var(--soft), var(--soft-blue));
-    }
-
-    .notice strong {
-      color: #4d3fb1;
-    }
-
-    section {
-      padding: 26px 0;
-      border-top: 1px solid rgba(123, 101, 217, 0.16);
-    }
-
-    section:first-of-type {
-      border-top: 0;
-      padding-top: 0;
-    }
-
-    h2 {
-      margin: 0 0 12px;
-      color: #2a3050;
-      font-size: clamp(1.25rem, 3vw, 1.62rem);
-      line-height: 1.25;
-      letter-spacing: -0.015em;
-    }
-
-    p {
-      margin: 0 0 14px;
-      color: var(--muted);
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    ul {
-      margin: 12px 0 0;
-      padding-left: 1.25rem;
-      color: var(--muted);
-    }
-
-    li {
-      margin: 7px 0;
-    }
-
-    strong {
-      color: var(--ink);
-    }
-
-    .link-list {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      padding: 0;
-      list-style: none;
-    }
-
-    .link-list li {
-      margin: 0;
-    }
-
-    .link-list a {
-      display: block;
-      min-height: 100%;
-      padding: 14px 15px;
-      border: 1px solid rgba(60, 131, 201, 0.2);
-      border-radius: 16px;
-      background: #f8fbff;
-      text-decoration: none;
-    }
-
-    footer {
-      padding: 22px 48px 38px;
-      color: #757b8d;
-      font-size: 0.95rem;
-      text-align: center;
-    }
-
-    .placeholder {
-      color: #8a3d72;
-      font-weight: 800;
-    }
-
-    @media (max-width: 720px) {
-      .page {
-        padding: 16px 12px 28px;
-      }
-
-      .policy-card {
-        border-radius: 22px;
-      }
-
-      header,
-      main,
-      footer {
-        padding-left: 22px;
-        padding-right: 22px;
-      }
-
-      header {
-        padding-top: 32px;
-        padding-bottom: 30px;
-      }
-
-      .brand-row {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 12px;
-        margin-bottom: 26px;
-      }
-
-      main {
-        padding-top: 26px;
-      }
-
-      section {
-        padding: 23px 0;
-      }
-
-      .link-list {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  :focus-visible{ outline:2px solid var(--blue); outline-offset:2px; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+</style>
 </head>
 <body>
-  <div class="page">
-    <article class="policy-card">
-      <header>
-        <div class="brand-row" aria-label="Publisher and policy label">
-          <p class="app-name">Twin Shift: Mirror Puzzle</p>
-          <span class="badge">ENK</span>
-        </div>
-        <h1>Privacy Policy for Twin Shift: Mirror Puzzle</h1>
-        <p class="subtitle">A clear overview of how this iOS puzzle game handles gameplay data, advertising, consent, and privacy choices.</p>
-      </header>
 
-      <main>
-        <div class="notice">
-          <p><strong>Effective Date:</strong> July 2026</p>
-          <p>This date can be updated before publishing this page as the App Store Connect Privacy Policy URL.</p>
-        </div>
-
-        <section id="introduction">
-          <h2>1. Introduction</h2>
-          <p>This Privacy Policy explains how <strong>Twin Shift: Mirror Puzzle</strong> ("the App"), published by <strong>Elif Nida Kayaduman</strong> ("we," "us," or "the developer"), handles information when you use the App.</p>
-          <p>Twin Shift: Mirror Puzzle is a mobile puzzle game with gameplay levels, hints, undo features, progression, landmark unlocks, rewarded ads, rewarded landmark unlock ads, and interstitial ads. This policy describes local gameplay data, advertising, consent choices, and related privacy practices.</p>
-        </section>
-
-        <section id="not-collected-directly">
-          <h2>2. Information We Do Not Collect Directly</h2>
-          <p>The App does not require account creation and does not ask users to submit personal profile information through forms or accounts.</p>
-          <ul>
-            <li>No account creation is required.</li>
-            <li>We do not directly collect your name, email address, phone number, or physical address through the App.</li>
-            <li>The App does not request user-generated photos or videos.</li>
-            <li>The App does not request access to your contacts.</li>
-            <li>The App does not directly request precise location from the user.</li>
-            <li>The developer does not collect payment information for this App.</li>
-          </ul>
-          <p>This does not mean that no data is ever processed. Third-party advertising services used in the App may collect or process certain information as described below.</p>
-        </section>
-
-        <section id="local-storage">
-          <h2>3. Information Stored Locally on the Device</h2>
-          <p>The App may store gameplay and preference data locally on your device using Apple/iOS local storage such as UserDefaults or similar local persistence. This local data is mainly used to make the game work correctly and remember your progress.</p>
-          <ul>
-            <li>Completed levels and gameplay progression</li>
-            <li>Unlocked landmarks and early unlocked landmarks</li>
-            <li>Hint credits and ad reward state</li>
-            <li>Undo status, including free undo status where applicable</li>
-            <li>Game settings and rating prompt state</li>
-            <li>Privacy or consent state where applicable</li>
-          </ul>
-        </section>
-
-        <section id="advertising">
-          <h2>4. Advertising and Third-Party Services</h2>
-          <p>The App integrates <strong>Google AdMob</strong> through the Google Mobile Ads SDK to display ads. The App may also use the <strong>Google User Messaging Platform SDK</strong> to request and manage consent where required.</p>
-          <p>Google and its advertising partners may collect or process certain data for ad serving, fraud prevention, reporting, frequency capping, measurement, and related purposes. Depending on your region, consent choices, device settings, and Google/AdMob configuration, this may include:</p>
-          <ul>
-            <li>Device information</li>
-            <li>Advertising identifiers where permitted</li>
-            <li>Approximate location inferred by Google or AdMob where applicable</li>
-            <li>Ad interactions and ad performance information</li>
-            <li>Diagnostics and crash-related information</li>
-            <li>IP address</li>
-            <li>App activity related to ad serving</li>
-          </ul>
-          <p>Data handling by Google and its partners is governed by their own policies and settings. Some ads may be personalized or non-personalized depending on your region, consent choices, device settings, and advertising configuration.</p>
-          <p>The App does <strong>not</strong> use banner ads and does <strong>not</strong> use app open ads.</p>
-        </section>
-
-        <section id="rewarded-ads">
-          <h2>5. Rewarded Ads</h2>
-          <p>You may choose to watch rewarded ads or rewarded interstitial ads to receive optional in-game benefits, such as hint credits or early landmark unlocks.</p>
-          <p>Rewarded ads are optional. If you choose not to watch a rewarded ad, you can continue playing normally, although the optional reward may not be granted.</p>
-        </section>
-
-        <section id="interstitial-ads">
-          <h2>6. Interstitial Ads</h2>
-          <p>Interstitial ads may be shown at natural breaks in the game, such as after completing levels. They are intended to appear between gameplay moments and not during active gameplay.</p>
-          <p>Interstitial ads are separate from optional rewarded ads. They are not used to unlock landmarks.</p>
-        </section>
-
-        <section id="consent">
-          <h2>7. Consent and Privacy Choices</h2>
-          <p>In regions where consent is required, the App may show a consent form through Google User Messaging Platform. Your consent choices may affect whether advertising is personalized or non-personalized.</p>
-          <p>If implemented in the App, you may be able to manage privacy choices through the App settings. You can also manage ad tracking and personalization through your iOS device settings.</p>
-        </section>
-
-        <section id="att">
-          <h2>8. App Tracking Transparency and Device Settings</h2>
-          <p>iOS may allow you to limit tracking through device settings. If the App requests tracking permission, you can allow or deny that permission.</p>
-          <p>Where required by Apple's policies, the App will request permission before accessing tracking-related identifiers. Denying permission does not prevent the game from being played. Ads may still appear, but they may be less personalized.</p>
-          <p>The App may use SKAdNetwork or other Apple advertising attribution technologies as required for advertising measurement.</p>
-        </section>
-
-        <section id="children">
-          <h2>9. Children's Privacy</h2>
-          <p>The App is a general-audience puzzle game. The developer does not knowingly collect personal information from children through account registration, forms, or direct user submissions.</p>
-          <p>If a parent or guardian believes that a child has provided personal information to the developer, please contact us so we can review and address the request.</p>
-        </section>
-
-        <section id="data-sharing">
-          <h2>10. Data Sharing</h2>
-          <p>The developer does not sell user personal information.</p>
-          <p>Data may be processed by third-party service providers such as Google AdMob for advertising, consent management, fraud prevention, reporting, and analytics related to ads. We may also disclose information if required to comply with legal obligations, enforce terms, or protect rights and safety in limited circumstances.</p>
-        </section>
-
-        <section id="retention">
-          <h2>11. Data Retention</h2>
-          <p>Local gameplay progress remains on your device unless you delete the App, reset the relevant app data, or the App provides a feature to clear it.</p>
-          <p>Ad-related data is handled by Google and AdMob according to their own policies. The developer does not maintain a user account database for this App.</p>
-        </section>
-
-        <section id="security">
-          <h2>12. Security</h2>
-          <p>We make reasonable efforts to protect the App and minimize direct personal data collection. However, no method of electronic storage, processing, or transmission is 100% secure.</p>
-        </section>
-
-        <section id="international">
-          <h2>13. International Availability</h2>
-          <p>The App may be available globally. Third-party services such as Google AdMob may process data in different countries, depending on their infrastructure, policies, and legal requirements.</p>
-          <p>Users should review Google's privacy terms for more information about ad-related processing.</p>
-        </section>
-
-        <section id="changes">
-          <h2>14. Changes to This Privacy Policy</h2>
-          <p>We may update this Privacy Policy from time to time. If changes are made, the Effective Date at the top of this page will be updated. Continued use of the App after changes are posted means the updated policy applies.</p>
-        </section>
-
-        <section id="contact">
-          <h2>15. Contact</h2>
-          <p>Contact: <a href="mailto:elifnida@gmail.com">elifnida@gmail.com</a></p>
-        </section>
-
-        <section id="links">
-          <h2>16. Third-Party Privacy Links</h2>
-          <p>The following links provide additional information about third-party privacy practices and device privacy controls:</p>
-          <ul class="link-list">
-            <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
-            <li><a href="https://support.google.com/admob/answer/6128543">Google AdMob Privacy and Advertising</a></li>
-            <li><a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></li>
-          </ul>
-        </section>
-      </main>
-
-      <footer>
-        <p>&copy; ENK. All rights reserved.</p>
-      </footer>
-    </article>
+<header>
+  <div class="mark">
+    <span class="mark-glyph" aria-hidden="true"></span>
+    <span class="mark-text">Twin Shift: Mirror Puzzle</span>
   </div>
+  <h1>Privacy Policy</h1>
+  <p class="dek">How this game handles gameplay data, advertising, and the choices you have around both.</p>
+  <div class="meta">
+    <span><strong>Effective</strong> July 2026</span>
+    <span><strong>Publisher</strong> Elif Nida Kayaduman</span>
+    <span><strong>Contact</strong> <a href="mailto:elifnida@gmail.com">elifnida@gmail.com</a></span>
+  </div>
+</header>
+
+<div class="layout">
+  <nav aria-label="Sections">
+    <a href="#introduction" class="active"><span class="n">01</span>Introduction</a>
+    <a href="#not-collected"><span class="n">02</span>What we don't collect</a>
+    <a href="#local-storage"><span class="n">03</span>On-device storage</a>
+    <a href="#advertising"><span class="n">04</span>Advertising</a>
+    <a href="#rewarded"><span class="n">05</span>Rewarded ads</a>
+    <a href="#interstitial"><span class="n">06</span>Interstitial ads</a>
+    <a href="#consent"><span class="n">07</span>Consent choices</a>
+    <a href="#att"><span class="n">08</span>Tracking permission</a>
+    <a href="#children"><span class="n">09</span>Children's privacy</a>
+    <a href="#sharing"><span class="n">10</span>Data sharing</a>
+    <a href="#retention"><span class="n">11</span>Retention</a>
+    <a href="#security"><span class="n">12</span>Security</a>
+    <a href="#international"><span class="n">13</span>International use</a>
+    <a href="#changes"><span class="n">14</span>Policy changes</a>
+    <a href="#contact"><span class="n">15</span>Contact</a>
+    <a href="#links"><span class="n">16</span>Third-party links</a>
+  </nav>
+
+  <main>
+    <div class="callout">
+      <div><strong>In short:</strong> Twin Shift doesn't ask you to create an account or hand over personal details. Advertising is handled through Google AdMob, and every rewarded ad is something you choose to watch — never something the game requires.</div>
+    </div>
+
+    <section id="introduction">
+      <div class="sec-head"><span class="sec-num">01</span><h2>Introduction</h2></div>
+      <p>This policy explains how <strong>Twin Shift: Mirror Puzzle</strong>, published by <strong>Elif Nida Kayaduman</strong>, handles information when you play.</p>
+      <p>Twin Shift is a puzzle game built around levels, hints, progression, and landmark unlocks, supported by rewarded and interstitial advertising. The sections below cover what stays on your device, what advertising partners may process, and the choices available to you.</p>
+    </section>
+
+    <section id="not-collected">
+      <div class="sec-head"><span class="sec-num">02</span><h2>What we don't collect</h2></div>
+      <p>Playing Twin Shift doesn't require an account, and the game never asks for a profile.</p>
+      <ul>
+        <li>No sign-up or account creation</li>
+        <li>No name, email, phone number, or address collected through the game</li>
+        <li>No access to photos, videos, or contacts</li>
+        <li>No request for precise location</li>
+        <li>No payment information handled by the developer</li>
+      </ul>
+      <p>This covers what the game itself asks of you. Advertising services used within the game may still process certain data on their own — that's detailed in Section 4.</p>
+    </section>
+
+    <section id="local-storage">
+      <div class="sec-head"><span class="sec-num">03</span><h2>On-device storage</h2></div>
+      <p>Twin Shift saves gameplay and preference data locally on your device, mainly so progress carries over between sessions.</p>
+      <ul>
+        <li>Completed levels and overall progression</li>
+        <li>Unlocked landmarks, including any unlocked early</li>
+        <li>Hint credits and ad-reward state</li>
+        <li>Undo status, including free undo availability</li>
+        <li>Game settings and rating-prompt state</li>
+        <li>Consent state, where applicable</li>
+      </ul>
+    </section>
+
+    <section id="advertising">
+      <div class="sec-head"><span class="sec-num">04</span><h2>Advertising</h2></div>
+      <p>Twin Shift uses <strong>Google AdMob</strong> to serve ads, and may use the <strong>Google User Messaging Platform</strong> to manage consent where required.</p>
+      <p>Google and its advertising partners may process certain data for ad delivery, fraud prevention, reporting, frequency capping, and measurement. Depending on your region, consent choices, and device settings, this can include:</p>
+      <ul>
+        <li>Device information</li>
+        <li>Advertising identifiers, where permitted</li>
+        <li>Approximate location inferred by Google or AdMob</li>
+        <li>Ad interaction and performance data</li>
+        <li>Diagnostics and crash-related information</li>
+        <li>IP address</li>
+        <li>App activity tied to ad serving</li>
+      </ul>
+      <p>This processing is governed by Google's own policies, not ours. Ads may be personalized or non-personalized depending on your consent and settings. Twin Shift does not use banner ads or app open ads.</p>
+    </section>
+
+    <section id="rewarded">
+      <div class="sec-head"><span class="sec-num">05</span><h2>Rewarded ads</h2></div>
+      <p>Some in-game benefits — hint credits, early landmark unlocks — are available in exchange for watching a rewarded ad. These are always optional. Skipping one means skipping the reward; the rest of the game continues as normal.</p>
+    </section>
+
+    <section id="interstitial">
+      <div class="sec-head"><span class="sec-num">06</span><h2>Interstitial ads</h2></div>
+      <p>Interstitial ads appear at natural breaks, such as after finishing a level — never during active gameplay. They're separate from rewarded ads and are never used to gate landmark unlocks.</p>
+    </section>
+
+    <section id="consent">
+      <div class="sec-head"><span class="sec-num">07</span><h2>Consent choices</h2></div>
+      <p>Where consent is required by local regulation, Twin Shift presents a consent form through Google's User Messaging Platform. The choice you make there determines whether ads are personalized.</p>
+      <p>You can revisit privacy choices in the game's settings, and manage ad tracking more broadly through your iOS device settings.</p>
+    </section>
+
+    <section id="att">
+      <div class="sec-head"><span class="sec-num">08</span><h2>Tracking permission</h2></div>
+      <p>iOS lets you limit tracking at the device level. Where Apple's rules require it, Twin Shift will ask for tracking permission before accessing tracking-related identifiers — you're free to allow or deny it.</p>
+      <p>Denying permission doesn't affect your ability to play. Ads will still appear, just with less personalization. Twin Shift may use SKAdNetwork or other Apple attribution tools for ad measurement.</p>
+    </section>
+
+    <section id="children">
+      <div class="sec-head"><span class="sec-num">09</span><h2>Children's privacy</h2></div>
+      <p>Twin Shift is a general-audience puzzle game. We don't knowingly collect personal information from children through accounts, forms, or direct submissions, since the game has none of those.</p>
+      <p>If you believe a child has shared personal information with us, contact us and we'll review and address it.</p>
+    </section>
+
+    <section id="sharing">
+      <div class="sec-head"><span class="sec-num">10</span><h2>Data sharing</h2></div>
+      <p>We don't sell personal information. Some data is processed by service providers — namely Google AdMob — for advertising, consent management, fraud prevention, and reporting. We may also disclose information where required by law, or to protect our rights and the safety of others.</p>
+    </section>
+
+    <section id="retention">
+      <div class="sec-head"><span class="sec-num">11</span><h2>Retention</h2></div>
+      <p>Local progress stays on your device until you delete the app, reset its data, or use an in-game option to clear it. Ad-related data is retained according to Google's own policies — we don't maintain a separate user database.</p>
+    </section>
+
+    <section id="security">
+      <div class="sec-head"><span class="sec-num">12</span><h2>Security</h2></div>
+      <p>We take reasonable steps to protect the game and keep direct data collection to a minimum. No method of storage or transmission is ever fully secure, and we can't guarantee absolute protection.</p>
+    </section>
+
+    <section id="international">
+      <div class="sec-head"><span class="sec-num">13</span><h2>International use</h2></div>
+      <p>Twin Shift is available globally. Advertising partners such as Google AdMob may process data in different countries depending on their own infrastructure and legal obligations. Google's privacy terms have more detail on how that processing works.</p>
+    </section>
+
+    <section id="changes">
+      <div class="sec-head"><span class="sec-num">14</span><h2>Policy changes</h2></div>
+      <p>This policy may be updated occasionally. Any change updates the effective date at the top of this page — continuing to play after that means the new version applies.</p>
+    </section>
+
+    <section id="contact">
+      <div class="sec-head"><span class="sec-num">15</span><h2>Contact</h2></div>
+      <p>Questions about this policy: <a href="mailto:elifnida@gmail.com">elifnida@gmail.com</a></p>
+    </section>
+
+    <section id="links">
+      <div class="sec-head"><span class="sec-num">16</span><h2>Third-party links</h2></div>
+      <p>For more on how our advertising partners and Apple handle privacy:</p>
+      <div class="link-grid">
+        <a href="https://policies.google.com/privacy">Google Privacy Policy</a>
+        <a href="https://support.google.com/admob/answer/6128543">Google AdMob Privacy &amp; Advertising</a>
+        <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>© Elif Nida Kayaduman. All rights reserved.</footer>
+
+<script>
+  const links = Array.from(document.querySelectorAll('nav a'));
+  const targets = links.map(l => document.querySelector(l.getAttribute('href')));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(!e.isIntersecting) return;
+      const idx = targets.indexOf(e.target);
+      if(idx === -1) return;
+      links.forEach(l => l.classList.remove('active'));
+      links[idx].classList.add('active');
+    });
+  }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+  targets.forEach(t => t && io.observe(t));
+</script>
+
 </body>
 </html>
