@@ -465,7 +465,7 @@
   <div class="hero-label">Legal Document</div>
   <h1>Your Privacy,<br><em>Simply &amp; Clearly</em></h1>
   <div class="hero-sub">
-    <span>Last updated April 2026</span>
+    <span>Last updated July 2026</span>
     <span>ChargePath</span>
   </div>
 </div>
@@ -484,7 +484,7 @@
       <a href="#s5"><span class="toc-num">05</span>Local Processing</a>
       <a href="#s6"><span class="toc-num">06</span>Third-Party Services</a>
       <a href="#s7"><span class="toc-num">07</span>Advertising</a>
-      <a href="#s8"><span class="toc-num">08</span>Premium Features</a>
+      <a href="#s8"><span class="toc-num">08</span>Ad-Supported Features</a>
       <a href="#s9"><span class="toc-num">09</span>Data Storage</a>
       <a href="#s10"><span class="toc-num">10</span>Data Retention</a>
       <a href="#s11"><span class="toc-num">11</span>What We Don't Do</a>
@@ -581,8 +581,7 @@
       <div class="card-row"><span class="dot"></span><div><strong>Apple WeatherKit</strong> — Weather conditions along your route. Subject to Apple's privacy policy.</div></div>
       <div class="card-row"><span class="dot"></span><div><strong>Open-Meteo</strong> — Fallback weather data provider when WeatherKit is unavailable. Open-Meteo is GDPR-compliant and does not require user identification.</div></div>
       <div class="card-row"><span class="dot"></span><div><strong>Open Charge Map and other region-specific station data providers</strong> — Used to display EV charging station information in supported countries or regions. This station data does not include personal information about the user.</div></div>
-      <div class="card-row"><span class="dot"></span><div><strong>Apple Remote Time Service</strong> — Used to verify the current time for subscription validation purposes.</div></div>
-      <div class="card-row"><span class="dot"></span><div><strong>Google AdMob</strong> — Advertising for free users. Subject to Google's privacy policy.</div></div>
+      <div class="card-row"><span class="dot"></span><div><strong>Google AdMob</strong> — Banner, interstitial, and rewarded advertising. Subject to Google's privacy policy.</div></div>
     </div>
 
     <h3>Google AdMob — Advertising</h3>
@@ -592,6 +591,7 @@
       <div class="card-row"><span class="dot"></span>Approximate location derived from IP address</div>
       <div class="card-row"><span class="dot"></span>Device type and operating system information</div>
       <div class="card-row"><span class="dot"></span>IP address for fraud prevention and ad delivery</div>
+      <div class="card-row"><span class="dot"></span>Ad views, impressions, and rewarded ad completion events needed to deliver ads and grant in-app rewards</div>
     </div>
     <p style="margin-top:10px;">All AdMob data is handled by Google under their own privacy policy.</p>
   </section>
@@ -604,9 +604,9 @@
     </div>
     <div class="divider"></div>
     <div class="card">
-      <div class="card-row"><span class="dot"></span>Free users may see interstitial and banner advertisements</div>
-      <div class="card-row"><span class="dot"></span>Premium users see no advertisements whatsoever</div>
-      <div class="card-row"><span class="dot"></span>Rewarded ads may be watched to temporarily unlock certain features</div>
+      <div class="card-row"><span class="dot"></span>ChargePath is supported by advertising instead of paid in-app purchases or subscriptions</div>
+      <div class="card-row"><span class="dot"></span>Users may see banner and interstitial advertisements while using the app</div>
+      <div class="card-row"><span class="dot"></span>Rewarded ads may be watched voluntarily to temporarily unlock certain features or receive in-app benefits</div>
       <div class="card-row"><span class="dot"></span>Advertising consent is managed via Apple's App Tracking Transparency framework</div>
     </div>
   </section>
@@ -615,19 +615,15 @@
   <section class="section" id="s8">
     <div class="section-header">
       <div class="section-num-wrap"><span class="section-num">08</span></div>
-      <h2>Premium Features</h2>
+      <h2>Ad-Supported Features</h2>
     </div>
     <div class="divider"></div>
-    <p>ChargePath Pro is available as a monthly or annual subscription via Apple In-App Purchase. Premium users unlock:</p>
+    <p>ChargePath no longer offers paid in-app purchases or subscriptions. Certain app features may be available by watching rewarded advertisements or through other ad-supported access rules.</p>
     <div class="card">
-      <div class="card-row"><span class="dot"></span>Unlimited trip planning</div>
-      <div class="card-row"><span class="dot"></span>Multiple route comparison and alternatives</div>
-      <div class="card-row"><span class="dot"></span>Risk analysis and weather insights</div>
-      <div class="card-row"><span class="dot"></span>Advanced route preferences</div>
-      <div class="card-row"><span class="dot"></span>Unlimited favourites</div>
-      <div class="card-row"><span class="dot"></span>Completely ad-free experience</div>
+      <div class="card-row"><span class="dot"></span>Rewarded ads are optional and are shown only when you choose to watch them for a reward or temporary feature access</div>
+      <div class="card-row"><span class="dot"></span>Reward eligibility, reward completion, temporary unlock status, and usage limits may be stored locally on your device</div>
+      <div class="card-row"><span class="dot"></span>The developer does not receive or store payment information because purchases and subscriptions are not offered</div>
     </div>
-    <p style="margin-top:12px;">Subscription purchases are processed by Apple and subject to Apple's privacy policy. The developer does not receive or store payment information.</p>
   </section>
 
   <!-- S9 -->
@@ -638,7 +634,7 @@
     </div>
     <div class="divider"></div>
     <div class="card">
-      <div class="card-row"><span class="dot"></span>Usage limits and premium status stored securely via iOS Keychain</div>
+      <div class="card-row"><span class="dot"></span>Usage limits, rewarded ad unlock status, and related local access state may be stored securely via iOS Keychain or local on-device storage</div>
       <div class="card-row"><span class="dot"></span>Vehicle profile and preferences stored locally on your device</div>
       <div class="card-row"><span class="dot"></span>When the widget is enabled, limited app data may be stored locally in an App Group container shared between the app and the widget so the widget can display nearby charging station information</div>
       <div class="card-row"><span class="dot"></span>Shared on-device data may include local app snapshots and nearby station summaries needed for widget presentation</div>
@@ -655,7 +651,7 @@
     </div>
     <div class="divider"></div>
     <div class="highlight">
-      Most data is stored locally on your device and is removed when you delete the app. This includes locally stored preferences, vehicle profile data, and widget-related shared local snapshots or nearby station summaries stored in the app's App Group container. However, <strong>some data stored in iOS Keychain</strong> (such as premium status and usage limits) may persist after deletion depending on iOS version and device settings. You can clear this by resetting all settings on your device. The developer does not retain any copies of your data on external servers.
+      Most data is stored locally on your device and is removed when you delete the app. This includes locally stored preferences, vehicle profile data, rewarded ad unlock state, and widget-related shared local snapshots or nearby station summaries stored in the app's App Group container. However, <strong>some data stored in iOS Keychain</strong> (such as usage limits or local access state) may persist after deletion depending on iOS version and device settings. You can clear this by resetting all settings on your device. The developer does not retain any copies of your data on external servers.
     </div>
   </section>
 
